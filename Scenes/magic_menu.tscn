@@ -1,0 +1,50 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/MPMenu.cs" type="Script" id=1]
+[ext_resource path="res://Scenes/player_control.tscn" type="PackedScene" id=2]
+
+[node name="MagicMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Soul" type="Label" parent="."]
+margin_left = 11.0
+margin_right = 199.0
+margin_bottom = 32.0
+text = "Soul: "
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Money" type="Label" parent="."]
+margin_left = 11.0
+margin_top = 32.0
+margin_right = 197.0
+margin_bottom = 64.0
+text = "Money: "
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ChangeForm" type="Label" parent="."]
+margin_left = 11.0
+margin_top = 64.0
+margin_right = 199.0
+margin_bottom = 96.0
+text = "Change player form num: "
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayerControl" parent="." instance=ExtResource( 2 )]
+size_flags_horizontal = 3
+size_flags_vertical = 3

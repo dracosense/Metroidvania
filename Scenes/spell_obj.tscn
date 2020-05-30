@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scripts/SpellObj.cs" type="Script" id=1]
+[ext_resource path="res://Scenes/pickable_item.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Animations/spell_obj.tres" type="SpriteFrames" id=3]
+
+[node name="SpellObjKB" instance=ExtResource( 2 )]
+
+[node name="ASprite" parent="." index="0"]
+scale = Vector2( 1, 1 )
+frames = ExtResource( 3 )
+animation = "spell_obj"
+frame = 2
+
+[node name="Area" parent="." index="2"]
+script = ExtResource( 1 )

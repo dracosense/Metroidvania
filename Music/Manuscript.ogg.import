@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Manuscript.ogg-4753b5a337609b41b1f995bc8b53ebbb.oggstr"
+
+[deps]
+
+source_file="res://Music/Manuscript.ogg"
+dest_files=[ "res://.import/Manuscript.ogg-4753b5a337609b41b1f995bc8b53ebbb.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

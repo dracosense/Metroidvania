@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/s_enemy.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scripts/SFlyingE.cs" type="Script" id=2]
+[ext_resource path="res://Animations/flying_eye.tres" type="SpriteFrames" id=3]
+
+[sub_resource type="CircleShape2D" id=36]
+radius = 12.4755
+
+[node name="SFlyingEnemy" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="ASprite" parent="." index="0"]
+frames = ExtResource( 3 )
+offset = Vector2( -5, 16 )
+
+[node name="Collision" parent="." index="1"]
+position = Vector2( 0, -8 )
+
+[node name="DamageArea" parent="." index="2"]
+position = Vector2( 0, -8.86828 )
+
+[node name="Collision" parent="DamageArea" index="0"]
+position = Vector2( 0, 1 )
+shape = SubResource( 36 )

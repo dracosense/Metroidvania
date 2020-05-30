@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/move_control.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/spell_control.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/actions_control.tscn" type="PackedScene" id=3]
+
+[node name="PlayerControl" type="Control"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpellControl" parent="." instance=ExtResource( 2 )]
+anchor_bottom = 1.005
+margin_left = 410.0
+margin_bottom = -525.0
+
+[node name="MoveControl" parent="." instance=ExtResource( 1 )]
+anchor_bottom = 1.0
+margin_top = 525.0
+
+[node name="ActionsControl" parent="." instance=ExtResource( 3 )]
+anchor_right = 0.995
+margin_left = 860.0
+margin_right = 0.119934

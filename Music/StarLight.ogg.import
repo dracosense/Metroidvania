@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/StarLight.ogg-1ca0da320ad036a30a957407cca9fd55.oggstr"
+
+[deps]
+
+source_file="res://Music/StarLight.ogg"
+dest_files=[ "res://.import/StarLight.ogg-1ca0da320ad036a30a957407cca9fd55.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

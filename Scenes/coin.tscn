@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scripts/Coin.cs" type="Script" id=1]
+[ext_resource path="res://Animations/coin.tres" type="SpriteFrames" id=2]
+[ext_resource path="res://Scenes/pickable_item.tscn" type="PackedScene" id=3]
+
+[node name="CoinKB" instance=ExtResource( 3 )]
+
+[node name="ASprite" parent="." index="0"]
+frames = ExtResource( 2 )
+frame = 4
+
+[node name="Area" parent="." index="2"]
+script = ExtResource( 1 )

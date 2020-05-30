@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Sprites/MapImages/2m_hidden1.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/HiddenPFromRoom.cs" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 32, 128 )
+
+[node name="MHidden1-1_1" type="StaticBody2D"]
+collision_layer = 4228
+collision_mask = 0
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 2, 2 )
+texture = ExtResource( 1 )
+offset = Vector2( 1, -1 )
+
+[node name="CP" type="CollisionShape2D" parent="."]
+position = Vector2( -800, -160 )
+shape = SubResource( 1 )
+
+[node name="CP2" type="CollisionShape2D" parent="."]
+position = Vector2( 672, 128 )
+shape = SubResource( 1 )

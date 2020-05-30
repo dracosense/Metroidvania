@@ -1,0 +1,134 @@
+[gd_scene load_steps=25 format=2]
+
+[ext_resource path="res://Scenes/magic_player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/game_map.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/magic_map1_enemies.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Sprites/MapImages/2full.png" type="Texture" id=4]
+[ext_resource path="res://Music/For the king.ogg" type="AudioStream" id=5]
+[ext_resource path="res://Scenes/spirit_player.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Hidden/hidden1_1.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/spell_obj.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/save_crystal.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scripts/SpritePPartDraw.cs" type="Script" id=10]
+[ext_resource path="res://Scenes/spirit_map1_enemies.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/Hidden/hidden1_2.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/Hidden/hidden1_4.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scenes/Hidden/hidden1_3.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Scenes/Hidden/hidden1_5.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Scenes/Hidden/hidden1_6.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Scenes/Hidden/hidden1_7.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Scenes/Hidden/m_hidden1_1.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Scenes/Hidden/s_hidden1_1.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Scenes/Hidden/s_hidden1_2.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Scenes/Hidden/s_hidden1_3.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Scenes/Hidden/s_hidden1_4.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Scenes/ch_form_crystal.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Scenes/map_objects.tscn" type="PackedScene" id=24]
+
+[node name="Game" type="Node2D"]
+__meta__ = {
+"_edit_horizontal_guides_": [ 426.083, 160.0 ]
+}
+
+[node name="Audio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+autoplay = true
+
+[node name="ChFormCrystal" parent="." instance=ExtResource( 23 )]
+position = Vector2( 8736, 1024 )
+
+[node name="SaveCrystal" parent="." instance=ExtResource( 9 )]
+position = Vector2( 928, 576 )
+scale = Vector2( 2, 2 )
+
+[node name="SaveCrystal2" parent="." instance=ExtResource( 9 )]
+position = Vector2( -96, 5952 )
+scale = Vector2( 2, 2 )
+
+[node name="SaveCrystal3" parent="." instance=ExtResource( 9 )]
+position = Vector2( 4160, 5024 )
+scale = Vector2( 2, 2 )
+
+[node name="Spells" type="Node2D" parent="."]
+
+[node name="SpellObj_2_0_0_1" parent="Spells" instance=ExtResource( 8 )]
+position = Vector2( 7488, 4224 )
+
+[node name="SpellObj_2_0_1_1" parent="Spells" instance=ExtResource( 8 )]
+position = Vector2( 6208, 2720 )
+
+[node name="SpellObj_2_0_2_1" parent="Spells" instance=ExtResource( 8 )]
+position = Vector2( -992, -1536 )
+
+[node name="Magic" type="Node2D" parent="."]
+
+[node name="MagicMap" type="Node2D" parent="Magic"]
+
+[node name="MagicMap1Enemies" parent="Magic/MagicMap" instance=ExtResource( 3 )]
+
+[node name="Spirit" type="Node2D" parent="."]
+
+[node name="SpiritMap" type="Node2D" parent="Spirit"]
+
+[node name="SpiritMap1Enemies" parent="Spirit/SpiritMap" instance=ExtResource( 11 )]
+
+[node name="Mind" type="Node2D" parent="."]
+visible = false
+
+[node name="MindMap" type="Node2D" parent="Mind"]
+
+[node name="Objects" parent="." instance=ExtResource( 24 )]
+position = Vector2( 4416, 2880 )
+
+[node name="MapSprite" type="Sprite" parent="."]
+position = Vector2( -3776, -5312 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 4 )
+centered = false
+script = ExtResource( 10 )
+
+[node name="Map" parent="." instance=ExtResource( 2 )]
+
+[node name="Hidden" type="Node2D" parent="."]
+
+[node name="Hidden1-5" parent="Hidden" instance=ExtResource( 15 )]
+position = Vector2( -96, -736 )
+
+[node name="Hidden1-1" parent="Hidden" instance=ExtResource( 7 )]
+position = Vector2( -1280, -1088 )
+
+[node name="Hidden1-2" parent="Hidden" instance=ExtResource( 12 )]
+position = Vector2( -1760, 416 )
+
+[node name="Hidden1-3" parent="Hidden" instance=ExtResource( 14 )]
+position = Vector2( -96, 5248 )
+
+[node name="Hidden1-4_2" parent="Hidden" instance=ExtResource( 13 )]
+position = Vector2( -2528, 864 )
+
+[node name="Hidden1-6" parent="Hidden" instance=ExtResource( 16 )]
+position = Vector2( -1952, -1984 )
+
+[node name="Hidden1-7" parent="Hidden" instance=ExtResource( 17 )]
+position = Vector2( -192, -2400 )
+
+[node name="MHidden1-1_1" parent="Hidden" instance=ExtResource( 18 )]
+position = Vector2( 3584, 1056 )
+
+[node name="SHidden1-1_2" parent="Hidden" instance=ExtResource( 19 )]
+position = Vector2( 4416, -832 )
+
+[node name="SHidden1-2_2" parent="Hidden" instance=ExtResource( 20 )]
+position = Vector2( 8768, 2624 )
+
+[node name="SHidden1-3_2" parent="Hidden" instance=ExtResource( 21 )]
+position = Vector2( 7456, 6464 )
+
+[node name="SHidden1-4_2" parent="Hidden" instance=ExtResource( 22 )]
+position = Vector2( -1696, 6272 )
+
+[node name="MagicPlayer" parent="." instance=ExtResource( 1 )]
+position = Vector2( -1536, 128 )
+
+[node name="SpiritPlayer" parent="." instance=ExtResource( 6 )]
+position = Vector2( -1536, 128 )

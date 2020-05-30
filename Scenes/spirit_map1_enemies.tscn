@@ -1,0 +1,120 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/s_enemy.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/s_flying_enemy.tscn" type="PackedScene" id=2]
+
+[node name="SpiritMap1Enemies" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+visible = false
+position = Vector2( -3776, -5312 )
+scale = Vector2( 2, 2 )
+centered = false
+
+[node name="SEnemy" parent="." instance=ExtResource( 1 )]
+position = Vector2( -64, 1024 )
+
+[node name="SEnemy14" parent="." instance=ExtResource( 1 )]
+position = Vector2( -2272, 1600 )
+
+[node name="SEnemy15" parent="." instance=ExtResource( 1 )]
+position = Vector2( -640, 3136 )
+
+[node name="SEnemy16" parent="." instance=ExtResource( 1 )]
+position = Vector2( -576, -1248 )
+
+[node name="SEnemy17" parent="." instance=ExtResource( 1 )]
+position = Vector2( -1056, -1536 )
+
+[node name="SEnemy18" parent="." instance=ExtResource( 1 )]
+position = Vector2( -928, -192 )
+
+[node name="SEnemy19" parent="." instance=ExtResource( 1 )]
+position = Vector2( -448, -1280 )
+
+[node name="SEnemy20" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1504, -896 )
+
+[node name="SEnemy21" parent="." instance=ExtResource( 1 )]
+position = Vector2( 6944, 5024 )
+
+[node name="SEnemy22" parent="." instance=ExtResource( 1 )]
+position = Vector2( 4960, 5888 )
+
+[node name="SEnemy23" parent="." instance=ExtResource( 1 )]
+position = Vector2( 4448, 5856 )
+
+[node name="SEnemy24" parent="." instance=ExtResource( 1 )]
+position = Vector2( 5344, 5888 )
+
+[node name="SEnemy2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 960, 9280 )
+
+[node name="SEnemy3" parent="." instance=ExtResource( 1 )]
+position = Vector2( -576, 9344 )
+
+[node name="SEnemy4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 640, 7840 )
+
+[node name="SEnemy5" parent="." instance=ExtResource( 1 )]
+position = Vector2( -1312, 6944 )
+
+[node name="SEnemy6" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1952, 9344 )
+
+[node name="SEnemy7" parent="." instance=ExtResource( 1 )]
+position = Vector2( 4736, 7040 )
+
+[node name="SEnemy8" parent="." instance=ExtResource( 1 )]
+position = Vector2( 4992, 9984 )
+
+[node name="SEnemy9" parent="." instance=ExtResource( 1 )]
+position = Vector2( 8320, 7904 )
+
+[node name="SEnemy10" parent="." instance=ExtResource( 1 )]
+position = Vector2( 8704, 7904 )
+
+[node name="SEnemy11" parent="." instance=ExtResource( 1 )]
+position = Vector2( 5856, 9632 )
+
+[node name="SEnemy12" parent="." instance=ExtResource( 1 )]
+position = Vector2( 8768, 8896 )
+
+[node name="SEnemy13" parent="." instance=ExtResource( 1 )]
+position = Vector2( 11200, 7776 )
+
+[node name="SFlyingEnemy" parent="." instance=ExtResource( 2 )]
+position = Vector2( 512, 9280 )
+
+[node name="SFlyingEnemy2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1664, 8576 )
+
+[node name="SFlyingEnemy6" parent="." instance=ExtResource( 2 )]
+position = Vector2( 3104, 7520 )
+
+[node name="SFlyingEnemy7" parent="." instance=ExtResource( 2 )]
+position = Vector2( 3232, 7136 )
+
+[node name="SFlyingEnemy8" parent="." instance=ExtResource( 2 )]
+position = Vector2( 3392, 7392 )
+
+[node name="SFlyingEnemy9" parent="." instance=ExtResource( 2 )]
+position = Vector2( 3552, 7552 )
+
+[node name="SFlyingEnemy10" parent="." instance=ExtResource( 2 )]
+position = Vector2( 3616, 7200 )
+
+[node name="SFlyingEnemy11" parent="." instance=ExtResource( 2 )]
+position = Vector2( 7808, 7840 )
+
+[node name="SFlyingEnemy12" parent="." instance=ExtResource( 2 )]
+position = Vector2( 10816, 7712 )
+
+[node name="SFlyingEnemy3" parent="." instance=ExtResource( 2 )]
+position = Vector2( -288, 7904 )
+
+[node name="SFlyingEnemy4" parent="." instance=ExtResource( 2 )]
+position = Vector2( -992, 8352 )
+
+[node name="SFlyingEnemy5" parent="." instance=ExtResource( 2 )]
+position = Vector2( -1568, 6944 )

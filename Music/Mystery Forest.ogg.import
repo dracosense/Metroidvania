@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Mystery Forest.ogg-b1ca336e4b781ba84869128272797cdd.oggstr"
+
+[deps]
+
+source_file="res://Music/Mystery Forest.ogg"
+dest_files=[ "res://.import/Mystery Forest.ogg-b1ca336e4b781ba84869128272797cdd.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

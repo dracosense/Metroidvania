@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/A Darkness Opus.ogg-60a16aa7272bd625ddab69393ccda9a4.oggstr"
+
+[deps]
+
+source_file="res://Music/A Darkness Opus.ogg"
+dest_files=[ "res://.import/A Darkness Opus.ogg-60a16aa7272bd625ddab69393ccda9a4.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

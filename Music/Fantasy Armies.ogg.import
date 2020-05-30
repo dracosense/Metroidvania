@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Fantasy Armies.ogg-1956c9cdafabb00dd2010ed6098e2cc4.oggstr"
+
+[deps]
+
+source_file="res://Music/Fantasy Armies.ogg"
+dest_files=[ "res://.import/Fantasy Armies.ogg-1956c9cdafabb00dd2010ed6098e2cc4.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

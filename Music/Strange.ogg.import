@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Strange.ogg-5067f3bc135ac8fa10205766fd1fbe94.oggstr"
+
+[deps]
+
+source_file="res://Music/Strange.ogg"
+dest_files=[ "res://.import/Strange.ogg-5067f3bc135ac8fa10205766fd1fbe94.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

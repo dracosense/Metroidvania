@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Sprites/MapImages/2hidden3.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/HiddenRoom.cs" type="Script" id=2]
+
+[node name="Hidden1-3" type="Area2D"]
+collision_layer = 4228
+collision_mask = 0
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 2, 2 )
+texture = ExtResource( 1 )
+offset = Vector2( -13, -7 )
+
+[node name="CP" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( 384, 352, 256, 352, 256, 384, 224, 384, 224, 352, 32, 352, -96, 416, -192, 448, -224, 480, -224, 512, -448, 512, -448, 64, -512, 64, -512, -256, -448, -256, -448, -352, -224, -352, -224, -608, -192, -608, -192, -672, 128, -672, 128, -352, 384, -352, 384, 288 )
+[connection signal="body_entered" from="." to="." method="_on_Room_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_Room_body_exited"]

@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/m_enemy.tscn" type="PackedScene" id=2]
+
+[node name="MagicMap1Enemies" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+visible = false
+position = Vector2( -3776, -5312 )
+scale = Vector2( 2, 2 )
+centered = false
+
+[node name="MEnemy" parent="." instance=ExtResource( 2 )]
+position = Vector2( -64, 992 )
+
+[node name="MEnemy6" parent="." instance=ExtResource( 2 )]
+position = Vector2( -2240, 1600 )
+
+[node name="MEnemy2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 3136, 5856 )
+
+[node name="MEnemy5" parent="." instance=ExtResource( 2 )]
+position = Vector2( 4896, 5856 )
+
+[node name="MEnemy3" parent="." instance=ExtResource( 2 )]
+position = Vector2( -2048, 4768 )
+
+[node name="MEnemy4" parent="." instance=ExtResource( 2 )]
+position = Vector2( -512, 3136 )

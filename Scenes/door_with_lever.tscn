@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scripts/Door.cs" type="Script" id=1]
+[ext_resource path="res://Scenes/simple_door.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Animations/lever.tres" type="SpriteFrames" id=3]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 16, 16 )
+
+[node name="DoorWithLever" type="Node2D"]
+
+[node name="Lever" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 1057
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Collision" type="CollisionShape2D" parent="Lever"]
+position = Vector2( 0, -32 )
+scale = Vector2( 2, 2 )
+shape = SubResource( 2 )
+
+[node name="ASprite" type="AnimatedSprite" parent="Lever"]
+scale = Vector2( 2, 2 )
+frames = ExtResource( 3 )
+animation = "closed"
+offset = Vector2( 0, -8 )
+
+[node name="Door" parent="." instance=ExtResource( 2 )]
+[connection signal="body_entered" from="Lever" to="Lever" method="_on_Door_body_entered"]
+[connection signal="body_entered" from="Lever" to="Door" method="_on_Door_body_entered"]
+[connection signal="body_exited" from="Lever" to="Lever" method="_on_Door_body_exited"]
+[connection signal="body_exited" from="Lever" to="Door" method="_on_Door_body_exited"]

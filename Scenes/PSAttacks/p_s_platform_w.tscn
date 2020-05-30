@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Sprites/Tilesets/tileset1.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/PSPlatformW.cs" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 23.7853, 7.99863 )
+
+[node name="PSPlatformW" type="StaticBody2D"]
+light_mask = 32
+collision_layer = 128
+collision_mask = 128
+script = ExtResource( 2 )
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 8 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+self_modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 0, 7.64645 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 64, 192, 48, 16 )

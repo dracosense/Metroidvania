@@ -1,0 +1,81 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Animations/adventurer.tres" type="SpriteFrames" id=1]
+[ext_resource path="res://Scripts/SpiritPlayer.cs" type="Script" id=2]
+[ext_resource path="res://Scenes/spirit_menu.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Shaders/out_of_game.shader" type="Shader" id=4]
+[ext_resource path="res://Scenes/background.tscn" type="PackedScene" id=5]
+
+[sub_resource type="ShaderMaterial" id=1]
+shader = ExtResource( 4 )
+shader_param/speed_k = 7.0
+shader_param/out_of_game = true
+shader_param/spirit_f = false
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 9.16767
+height = 11.1682
+
+[sub_resource type="ShaderMaterial" id=3]
+shader = ExtResource( 4 )
+shader_param/speed_k = 3.0
+shader_param/out_of_game = false
+shader_param/spirit_f = true
+
+[sub_resource type="Shader" id=4]
+code = "shader_type canvas_item;
+
+void fragment()
+{
+	vec4 c = texture(SCREEN_TEXTURE, SCREEN_UV);
+	float gray = (c.r + c.g + c.b) / 6.0f;
+	COLOR = vec4(gray, gray, gray, c.a); 
+}
+
+"
+
+[sub_resource type="ShaderMaterial" id=5]
+shader = SubResource( 4 )
+
+[node name="SpiritPlayer" type="KinematicBody2D"]
+material = SubResource( 1 )
+collision_layer = 32
+collision_mask = 160
+script = ExtResource( 2 )
+
+[node name="Collisions" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -21.75 )
+scale = Vector2( 1.5, 1.5 )
+shape = SubResource( 2 )
+
+[node name="ASprite" type="AnimatedSprite" parent="."]
+light_mask = 8
+material = SubResource( 3 )
+position = Vector2( 0.354, -27 )
+scale = Vector2( 1.5, 1.5 )
+frames = ExtResource( 1 )
+animation = "idle"
+frame = 1
+playing = true
+
+[node name="Camera" type="Camera2D" parent="."]
+rotating = true
+
+[node name="Background" parent="." instance=ExtResource( 5 )]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource( 5 )
+margin_left = -512.0
+margin_top = -300.0
+margin_right = 512.0
+margin_bottom = 300.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpiritMenu" parent="." instance=ExtResource( 3 )]
+anchor_right = 0.0
+margin_left = -512.0
+margin_top = -300.0
+margin_right = 512.0
+margin_bottom = 300.0

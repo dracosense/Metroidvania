@@ -1,0 +1,5 @@
+E:\projects\Godot\platformer\.mono\temp\bin\Tools\Platformer.dll
+E:\projects\Godot\platformer\.mono\temp\bin\Tools\Platformer.pdb
+E:\projects\Godot\platformer\.mono\temp\obj\Tools\Platformer.csprojAssemblyReference.cache
+E:\projects\Godot\platformer\.mono\temp\obj\Tools\Platformer.dll
+E:\projects\Godot\platformer\.mono\temp\obj\Tools\Platformer.pdb

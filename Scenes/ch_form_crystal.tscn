@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scenes/save_crystal.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scripts/ChFormCrystal.cs" type="Script" id=2]
+[ext_resource path="res://Sprites/Elements/rune_stone.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/env_talk.tscn" type="PackedScene" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 32, 32 )
+
+[node name="ChFormCrystal" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="Collision" parent="." index="0"]
+position = Vector2( 0, -64 )
+scale = Vector2( 2, 2 )
+shape = SubResource( 1 )
+
+[node name="Sprite" parent="." index="1"]
+position = Vector2( 0, -64 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="TalkPanel" parent="." index="2" instance=ExtResource( 4 )]
+margin_left = -63.6398
+margin_top = -207.183
+margin_right = -63.6398
+margin_bottom = -207.183

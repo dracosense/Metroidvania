@@ -1,0 +1,60 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/control_button.tscn" type="PackedScene" id=1]
+
+[node name="MoveControl" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 0.13
+margin_bottom = -7.62939e-06
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxC" type="HBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ui_left" parent="HBoxC" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 288.0
+margin_bottom = 78.0
+size_flags_stretch_ratio = 2.0
+text = "<<<<<"
+
+[node name="ui_left&ui_jump" parent="HBoxC" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 292.0
+margin_right = 436.0
+margin_bottom = 78.0
+mouse_filter = 1
+text = "<<<J"
+
+[node name="ui_jump" parent="HBoxC" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 440.0
+margin_right = 584.0
+margin_bottom = 78.0
+text = "jump"
+
+[node name="ui_right&ui_jump" parent="HBoxC" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 588.0
+margin_right = 732.0
+margin_bottom = 78.0
+text = "J>>>"
+
+[node name="ui_right" parent="HBoxC" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 736.0
+margin_right = 1024.0
+margin_bottom = 78.0
+size_flags_stretch_ratio = 2.0
+text = ">>>>>"

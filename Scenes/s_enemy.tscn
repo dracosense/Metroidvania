@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/enemy.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scripts/SpiritEnemy.cs" type="Script" id=2]
+
+[node name="Enemy" instance=ExtResource( 1 )]
+collision_layer = 64
+collision_mask = 128
+script = ExtResource( 2 )
+
+[node name="ASprite" parent="." index="0"]
+self_modulate = Color( 0, 0, 0, 1 )
+
+[node name="DamageArea" parent="." index="2"]
+collision_mask = 32

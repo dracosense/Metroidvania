@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Tools</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{68F33AEF-B634-463A-B43B-80AFDBB2890E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <OutputPath>.mono\temp\bin\$(Configuration)</OutputPath>
+    <RootNamespace>Platformer</RootNamespace>
+    <AssemblyName>Platformer</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <GodotProjectGeneratorVersion>1.0.7333.3918</GodotProjectGeneratorVersion>
+    <BaseIntermediateOutputPath>.mono\temp\obj</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)\$(Configuration)</IntermediateOutputPath>
+    <ApiConfiguration Condition=" '$(Configuration)' != 'Release' ">Debug</ApiConfiguration>
+    <ApiConfiguration Condition=" '$(Configuration)' == 'Release' ">Release</ApiConfiguration>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>$(GodotDefineConstants);GODOT;DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>portable</DebugType>
+    <Optimize>true</Optimize>
+    <DefineConstants>$(GodotDefineConstants);GODOT;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Tools|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>$(GodotDefineConstants);GODOT;DEBUG;TOOLS;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GodotSharp">
+      <Private>False</Private>
+      <HintPath>$(ProjectDir)/.mono/assemblies/$(ApiConfiguration)/GodotSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="GodotSharpEditor" Condition=" '$(Configuration)' == 'Tools' ">
+      <Private>False</Private>
+      <HintPath>$(ProjectDir)/.mono/assemblies/$(ApiConfiguration)/GodotSharpEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scripts\ACreature.cs" />
+    <Compile Include="Scripts\AIEData.cs" />
+    <Compile Include="Scripts\ChFormCrystal.cs" />
+    <Compile Include="Scripts\Constants.cs" />
+    <Compile Include="Scripts\ControlButton.cs" />
+    <Compile Include="Scripts\CreateItems.cs" />
+    <Compile Include="Scripts\CrystalObj.cs" />
+    <Compile Include="Scripts\DamageSAreaW.cs" />
+    <Compile Include="Scripts\DestroyableBlock.cs" />
+    <Compile Include="Scripts\Dialog.cs" />
+    <Compile Include="Scripts\Door.cs" />
+    <Compile Include="Scripts\EnemyFunc.cs" />
+    <Compile Include="Scripts\Functions.cs" />
+    <Compile Include="Scripts\GTileMap.cs" />
+    <Compile Include="Scripts\Coin.cs" />
+    <Compile Include="Scripts\Creature.cs" />
+    <Compile Include="Scripts\CreaturesAI.cs" />
+    <Compile Include="Scripts\Crystal.cs" />
+    <Compile Include="Scripts\EnemyBaseDamage.cs" />
+    <Compile Include="Scripts\EnemyParam.cs" />
+    <Compile Include="Scripts\HiddenPFromRoom.cs" />
+    <Compile Include="Scripts\HiddenRoom.cs" />
+    <Compile Include="Scripts\ItemsSpawner.cs" />
+    <Compile Include="Scripts\MagicCParam.cs" />
+    <Compile Include="Scripts\MagicCreature.cs" />
+    <Compile Include="Scripts\MagicEnemy.cs" />
+    <Compile Include="Scripts\MagicPlayer.cs" />
+    <Compile Include="Scripts\MCrystal.cs" />
+    <Compile Include="Scripts\MEEffects.cs" />
+    <Compile Include="Scripts\MPMenu.cs" />
+    <Compile Include="Scripts\MSpell.cs" />
+    <Compile Include="Scripts\NOnFloorSArea.cs" />
+    <Compile Include="Scripts\OnceDamageZone.cs" />
+    <Compile Include="Scripts\PhysicsObj.cs" />
+    <Compile Include="Scripts\PickableItem.cs" />
+    <Compile Include="Scripts\PlayerControl.cs" />
+    <Compile Include="Scripts\PlayerParam.cs" />
+    <Compile Include="Scripts\PMWeaponA.cs" />
+    <Compile Include="Scripts\PMoveAreaW.cs" />
+    <Compile Include="Scripts\PSPlatformW.cs" />
+    <Compile Include="Scripts\Root.cs" />
+    <Compile Include="Scripts\SaveCrystal.cs" />
+    <Compile Include="Scripts\SFlyingE.cs" />
+    <Compile Include="Scripts\SpellObj.cs" />
+    <Compile Include="Scripts\SpiritCreature.cs" />
+    <Compile Include="Scripts\SpiritEnemy.cs" />
+    <Compile Include="Scripts\SpiritPlayer.cs" />
+    <Compile Include="Scripts\SpiritPSpells.cs" />
+    <Compile Include="Scripts\SPMenu.cs" />
+    <Compile Include="Scripts\SpritePPartDraw.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

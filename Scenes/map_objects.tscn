@@ -1,0 +1,135 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/simple_door.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scripts/Door.cs" type="Script" id=3]
+[ext_resource path="res://Animations/lever.tres" type="SpriteFrames" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 16, 16 )
+
+[node name="Objects" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+visible = false
+scale = Vector2( 2, 2 )
+
+[node name="Doors" type="Node2D" parent="."]
+
+[node name="D" type="Node2D" parent="Doors"]
+
+[node name="Lever" type="Area2D" parent="Doors/D"]
+position = Vector2( 512, 832 )
+collision_layer = 0
+collision_mask = 1057
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Collision" type="CollisionShape2D" parent="Doors/D/Lever"]
+position = Vector2( 0, -32 )
+scale = Vector2( 2, 2 )
+shape = SubResource( 1 )
+
+[node name="ASprite" type="AnimatedSprite" parent="Doors/D/Lever"]
+scale = Vector2( 2, 2 )
+frames = ExtResource( 4 )
+animation = "closed"
+offset = Vector2( 0, -8 )
+
+[node name="Door" parent="Doors/D" instance=ExtResource( 2 )]
+position = Vector2( 288, -1576.31 )
+
+[node name="D2" type="Node2D" parent="Doors"]
+position = Vector2( -3680, -864 )
+
+[node name="Lever" type="Area2D" parent="Doors/D2"]
+position = Vector2( -1056, 672 )
+collision_layer = 0
+collision_mask = 1057
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Collision" type="CollisionShape2D" parent="Doors/D2/Lever"]
+position = Vector2( 0, -32 )
+scale = Vector2( 2, 2 )
+shape = SubResource( 1 )
+
+[node name="ASprite" type="AnimatedSprite" parent="Doors/D2/Lever"]
+scale = Vector2( 2, 2 )
+frames = ExtResource( 4 )
+animation = "closed"
+offset = Vector2( 0, -8 )
+
+[node name="Door" parent="Doors/D2" instance=ExtResource( 2 )]
+position = Vector2( -352, 256 )
+
+[node name="D3" type="Node2D" parent="Doors"]
+position = Vector2( -5664, 2976 )
+
+[node name="Lever" type="Area2D" parent="Doors/D3"]
+position = Vector2( 0, 96 )
+collision_layer = 0
+collision_mask = 1057
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Collision" type="CollisionShape2D" parent="Doors/D3/Lever"]
+position = Vector2( 0, -32 )
+scale = Vector2( 2, 2 )
+shape = SubResource( 1 )
+
+[node name="ASprite" type="AnimatedSprite" parent="Doors/D3/Lever"]
+scale = Vector2( 2, 2 )
+frames = ExtResource( 4 )
+animation = "closed"
+offset = Vector2( 0, -8 )
+
+[node name="Door" parent="Doors/D3" instance=ExtResource( 2 )]
+position = Vector2( 352, 128 )
+
+[node name="D4" type="Node2D" parent="Doors"]
+position = Vector2( -2432, -32 )
+
+[node name="Lever" type="Area2D" parent="Doors/D4"]
+position = Vector2( 2432, -3648 )
+collision_layer = 0
+collision_mask = 1057
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Collision" type="CollisionShape2D" parent="Doors/D4/Lever"]
+position = Vector2( 0, -32 )
+scale = Vector2( 2, 2 )
+shape = SubResource( 1 )
+
+[node name="ASprite" type="AnimatedSprite" parent="Doors/D4/Lever"]
+scale = Vector2( 2, 2 )
+frames = ExtResource( 4 )
+animation = "closed"
+offset = Vector2( 0, -8 )
+
+[node name="Door" parent="Doors/D4" instance=ExtResource( 2 )]
+position = Vector2( 5248, 2976 )
+[connection signal="body_entered" from="Doors/D/Lever" to="Doors/D/Door" method="_on_Door_body_entered"]
+[connection signal="body_entered" from="Doors/D/Lever" to="Doors/D/Lever" method="_on_Door_body_entered"]
+[connection signal="body_exited" from="Doors/D/Lever" to="Doors/D/Door" method="_on_Door_body_exited"]
+[connection signal="body_exited" from="Doors/D/Lever" to="Doors/D/Lever" method="_on_Door_body_exited"]
+[connection signal="body_entered" from="Doors/D2/Lever" to="Doors/D2/Door" method="_on_Door_body_entered"]
+[connection signal="body_entered" from="Doors/D2/Lever" to="Doors/D2/Lever" method="_on_Door_body_entered"]
+[connection signal="body_exited" from="Doors/D2/Lever" to="Doors/D2/Door" method="_on_Door_body_exited"]
+[connection signal="body_exited" from="Doors/D2/Lever" to="Doors/D2/Lever" method="_on_Door_body_exited"]
+[connection signal="body_entered" from="Doors/D3/Lever" to="Doors/D3/Door" method="_on_Door_body_entered"]
+[connection signal="body_entered" from="Doors/D3/Lever" to="Doors/D3/Lever" method="_on_Door_body_entered"]
+[connection signal="body_exited" from="Doors/D3/Lever" to="Doors/D3/Door" method="_on_Door_body_exited"]
+[connection signal="body_exited" from="Doors/D3/Lever" to="Doors/D3/Lever" method="_on_Door_body_exited"]
+[connection signal="body_entered" from="Doors/D4/Lever" to="Doors/D4/Door" method="_on_Door_body_entered"]
+[connection signal="body_entered" from="Doors/D4/Lever" to="Doors/D4/Lever" method="_on_Door_body_entered"]
+[connection signal="body_exited" from="Doors/D4/Lever" to="Doors/D4/Door" method="_on_Door_body_exited"]
+[connection signal="body_exited" from="Doors/D4/Lever" to="Doors/D4/Lever" method="_on_Door_body_exited"]
